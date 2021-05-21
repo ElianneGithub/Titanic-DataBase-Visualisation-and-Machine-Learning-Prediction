@@ -25,11 +25,11 @@ titanic.info()
 
 print(titanic.describe())
 
-""" Exercice 1 :  Dans un premier temps, vous nettoierez les données:
+""" Exercice 1 :  Dans un premier temps, nous nettoierons les données:
     
-• élimination des colonnes pour lesquelles beaucoup de données sont manquantes, ou peu pertinentes comme
+• élimination des colonnes pour lesquelles beaucoup de données sont manquantes, ou peu pertinentes 
 
-• élimination des lignes contiennent encore des données manquantes après élimination des colonnes """
+• élimination des lignes qui contiennent encore des données manquantes après élimination des colonnes """
 
 
 # D'apres les informations recoltes grace a titanic.info(), la colone Cabin contient le moins de donnes et donc le plus de cases vides
@@ -44,7 +44,7 @@ titanic = titanic.drop(['Cabin','Ticket'],axis=1)
 
 print(titanic.head())
 
-# Nous allons ensuite proceder a l elimination des lignes contiennant encore des données manquantes
+# Nous allons ensuite proceder a l elimination des lignes contiennant encore des données manquantes
 
 titanic = titanic.dropna()
 
@@ -52,8 +52,8 @@ print(titanic.isnull().sum())
 
 # Nous sommes a present certains que toutes les lignes ne contiennent pas d'informations manquantes et que les colonnes non pertinantes ont ete elimines
 
-""" Exercice 2 : Dans un second temps, vous proposerez différents types de visualisation qui vous semblent appropriés,
-l’objectif étant de repérer visuellement des motifs de corrélation entre les différentes informations. """
+""" Exercice 2 : Dans un second temps, nous proposerons différents types de visualisation qui nous semblent appropriés,
+l’objectif étant de repérer visuellement des motifs de corrélation entre les différentes informations. """
 
 
 # Nous allons dans un premier temps nous interesser à la demographie de la population des voyageurs donc faire des visualisations  pertinentes autour de leurs sexe, age et de leur parentalite
@@ -122,7 +122,7 @@ sns.countplot(x='Survived',data=titanic)
 plt.show()
 
 
-""" En croissant les donnessur la survie et la classe, on remarque que la majorité des passagers voyageant dans la classe 3 n'ont pas survécu
+""" En croissant les donnes sur la survie et la classe, on remarque que la majorité des passagers voyageant dans la classe 3 n'ont pas survécu
 tandis que la majorité des voyageurs ayant survécu voyageaient en classe 1   """
 
 sns.countplot(x='Survived',hue='Pclass',data=titanic)
@@ -132,7 +132,7 @@ plt.show()
 
 """ En corrélant les donnes sur la survie et le sexe, on remarque que la majorité des passagers n'ayant pas survécu sont des hommes
  tandis que la majorité des passagers ayant survécu sont des femmes.
-Il seble que la majorité et des hommesw et des femmes qui ont survécu avaient entre 20 et 40 ans
+Il semble que la majorité et des hommes et des femmes qui ont survécu avaient entre 20 et 40 ans
  """
 
 sns.countplot(x='Survived',hue='Sex',data=titanic)
