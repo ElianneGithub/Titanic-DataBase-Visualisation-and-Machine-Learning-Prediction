@@ -7,14 +7,16 @@ and the construction of a model to predict the survival or not of a passenger ac
 Exercice 1 :
 
 As a first step, we will clean up the data:
+
 elimination of the columns for which a lot of data is missing, or not very relevant.
+
 elimination of rows that still contain missing data after elimination of columns.
 
 
 Exercice 2 :
 
 In a second step, we will propose different types of visualisation that seem appropriate.
-The purpose being to visually identify correlation patterns between the different information.
+The purpose being to visually identify correlation patterns between the different informations.
 
 Exercice 3 :
 
