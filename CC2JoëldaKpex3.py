@@ -27,7 +27,7 @@ titanic = titanic.dropna()
 titanic['Embarked'] = titanic['Embarked'].map( {'S': 1, 'C': 2, 'Q': 3} ).astype(int)
 titanic['Sex'] = titanic['Sex'].map( {'male': 1, 'female': 2} ).astype(int)
 
-# Important tous les modèles dont nous auront besoin
+# Importons tous les modèles dont nous auront besoin
 
 from sklearn.linear_model import LogisticRegression  
 from sklearn.model_selection import train_test_split
@@ -122,7 +122,7 @@ modeles.sort_values(by='Précision', ascending=False)
 
 print(modeles)
 
-""" Après avoir utilisé plusieurs modèles, on voit que le modèle de Regression Logistique et le modèle d'Arbre de décision ont les plus précisions les plus élevés et sont donc les plus efficaces"""
+""" Après avoir utilisé plusieurs modèles, on voit que le modèle de Regression Logistique et le modèle d'Arbre de décision ont les précisions les plus élevés et sont donc les plus efficaces"""
 
 """ En dernière étape nous allons enfin tester le modèle de régression logistique sur le dataset et voir les resultats de correlation entre les informations et la survie"""
 
